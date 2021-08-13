@@ -18,7 +18,6 @@ jobs:
       
 
       - run: flutter pub get
-      - run: flutter analyze
       - run: flutter build apk --debug --split-per-abi
       - run: flutter pub run test test/
 #      - run: flutter pub run test_coverage
