@@ -153,7 +153,22 @@ class _FavDevicesState extends State<FavDevices> {
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold
                                 ),),
-                                SizedBox(height: 8,),
+                                SizedBox(height: 4,),
+                                Container(
+                                  width: screenSize.width/1.6,
+                                  child: new Text(
+                                    deviceController.resFavDeviceListing.value.devices[index].description,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                    style: new TextStyle(
+                                      fontSize: 13.0,
+                                      fontFamily: 'Roboto',
+                                      color: new Color(0xFF212121),
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(height: 4,),
                                 Row(
                                   children: [
                                     Text(Localization.of(context).devicePrice+" : ",style: TextStyle(
